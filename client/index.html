@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="sissy">
+<head>
+	<meta charset="utf-8">
+	<title>Sissymouth</title>
+</head>
+<body>
+	<h1>Sissymouth</h1>
+
+	<ul ng-controller="burnController as burnCtrl">
+		<li ng-repeat="burn in burnCtrl.burns">
+			{{burn}}
+		</li>
+	</ul>
+
+	<script src="dist/bundle.js"></script>
+</body>
+</html>

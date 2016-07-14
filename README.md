@@ -14,4 +14,6 @@
 
 * Is using gulp to transpile from ES2015. *
 
+Remember to import seed data: mongoimport --db sissy-dev --collection burns --type json --file server/burns-seed.json --jsonArray --drop
+
 

@@ -1,0 +1,7 @@
+	<ul>
+		<li ng-repeat="burn in burnCtrl.burns">
+			<a ui-sref="burns.details({burnId: burn})">{{burn}}</a>
+		</li>
+	</ul>
+
+	<div ui-view></div>

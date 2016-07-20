@@ -1,4 +1,5 @@
-<form class="form" name="newBurnForm" ng-submit="newBurnCtrl.saveBurn(burn)">
+<div>
+<form role="form" name="newBurnForm" ng-submit="newBurnCtrl.saveBurn(burn)">
 	<h3>A new burn? Oh no!</h3>
 
 	<div class="form-field">
@@ -12,12 +13,12 @@
 			<option value="solid">solid</option>
 			<option value="liquid">liquid</option>
 			<option value="goo">goo!</option>
-		</select>
+		</select><br>
 		<label for="type">Type:</label>
 		<select id="type" required ng-model="burn.type">
 			<option value="sweet">sweet</option>
 			<option value="savoury">savoury</option>
-		</select>
+		</select><br>
 		<label for="level">Burn Level:</label>
 		<select id="level" required ng-model="burn.level">
 			<option value="1">★</option>
@@ -25,10 +26,10 @@
 			<option value="3">★★★</option>
 			<option value="4">★★★★</option>
 			<option value="5">★★★★★</option>
-		</select>	
+		</select>	<br>
 		<label for="comments">Comments:</label>
-		<textarea id="comments" ng-model="burn.comments"></textarea>
-		<label for="photo">photo:</label>
+		<textarea id="comments" ng-model="burn.comments"></textarea><br>
+		<label for="photo">Photo:</label>
 		<input id="photo" ng-model="burn.photo"/>
 	</div>
 	<div> 
@@ -36,3 +37,4 @@
 	</div>
 
 </form>
+</div>

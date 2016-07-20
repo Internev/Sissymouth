@@ -4,11 +4,31 @@
 	<meta charset="utf-8">
 	<title>Sissymouth</title>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/sissy.css">
 </head>
 <body>
-	<h1><a href="/">Sissymouth</a></h1>
 
-	<div ui-view></div>
+	<div class="container">
+		<h1 class="jumbotron"><a ui-sref="burns">Sissymouth</a></h1>
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<!-- View -->
+			<div class="well col-sm-10" ui-view></div>
+
+			<div class="col-sm-1"></div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
 
 	<script src="dist/bundle.js"></script>
 </body>

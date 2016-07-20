@@ -32,4 +32,18 @@ angular.module('sissy', ["ui.router"])
 		},
 		controllerAs: 'detailCtrl',
 	})
+	.state('burns.new', {
+		url: '/add/new',
+		templateUrl: 'burns/new-burn.html',
+		controller: function($state, $http){
+			this.saveBurn = function(burn){
+				$http({method: 'POST', url: '/burns/add/new', data: {burn}})
+				.then(function(){
+					$state.go('burns');
+				});
+				//console.log('burn: ', burn);
+			};
+		},
+		controllerAs: 'newBurnCtrl'
+	})
 })

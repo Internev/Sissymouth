@@ -1,42 +1,38 @@
 [
 	{
 		"name" : "Soup",
-		"details": [{
-			"consistency": "Liquid",
-			"type": "Savoury",
-			"level": 3,
-			"comments": "Deep regret, it was poor soup.",
-			"photo": "img"
-		}]
+		"consistency": "Liquid",
+		"type": "Savoury",
+		"level": 3,
+		"comments": "Deep regret, it was poor soup.",
+		"photo": "img"
+
 	},
 	{
 		"name" : "Hot Jam Donut",
-		"details": [{
-			"consistency": "Solid",
-			"type": "Sweet",
-			"level": 4,
-			"comments": "Worth it.",
-			"photo": "img"
-		}]
+		"consistency": "Solid",
+		"type": "Sweet",
+		"level": 4,
+		"comments": "Worth it.",
+		"photo": "img"
+
 	},
 	{
 		"name" : "Coffee",
-		"details": [{
-			"consistency": "Liquid",
-			"type": "Savoury",
-			"level": 2,
-			"comments": "Didn't hurt too bad.",
-			"photo": "img"
-		}]
+		"consistency": "Liquid",
+		"type": "Savoury",
+		"level": 2,
+		"comments": "Didn't hurt too bad.",
+		"photo": "img"
+
 	},
 	{
 		"name" : "Hot Pie",
-		"details": [{
-			"consistency": "Solid",
-			"type": "Savoury",
-			"level": 4.5,
-			"comments": "3am 7/11 pie. Terrible idea.",
-			"photo": "img"
-		}]
+		"consistency": "Solid",
+		"type": "Savoury",
+		"level": 4.5,
+		"comments": "3am 7/11 pie. Terrible idea.",
+		"photo": "img"
+
 	}
 ]

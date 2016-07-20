@@ -36,6 +36,18 @@ _angular2.default.module('sissy', ["ui.router"]).config(function ($stateProvider
 			this.burnDetails = detailsService.data;
 		},
 		controllerAs: 'detailCtrl'
+	}).state('burns.new', {
+		url: '/add/new',
+		templateUrl: 'burns/new-burn.html',
+		controller: function controller($state, $http) {
+			this.saveBurn = function (burn) {
+				$http({ method: 'POST', url: '/burns/add/new', data: { burn: burn } }).then(function () {
+					$state.go('burns');
+				});
+				//console.log('burn: ', burn);
+			};
+		},
+		controllerAs: 'newBurnCtrl'
 	});
 });
 

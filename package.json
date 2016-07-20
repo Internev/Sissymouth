@@ -1,5 +1,5 @@
 {
-  "name": "stb-mean",
+  "name": "Sissymouth-MEAN",
   "version": "1.0.0",
   "description": "* Express * MongoDB",
   "main": "index.js",
@@ -7,11 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "gulp watch --gulpfile client/gulpfile.babel.js"
   },
-  "author": "Carlos Souza <carloshrsouza@gmail.com> (http://csouza.me/)",
+  "author": "Neville Challinger, nchallinger@gmail.com (@internev)",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.7",
     "angular-ui-router": "^0.3.1",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongodb": "^2.2.1"
   },

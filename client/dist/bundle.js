@@ -12,7 +12,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _angular2.default.module('sissy', ["ui.router"]).config(function ($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/burns');
 
-	$stateProvider.state('burns', {
+	$stateProvider
+	//Pulls data from server app.js /burns endpoint. 
+	.state('burns', {
 		url: '/burns',
 		templateUrl: 'burns/burns-nav.html',
 		resolve: {
@@ -22,6 +24,7 @@ _angular2.default.module('sissy', ["ui.router"]).config(function ($stateProvider
 		},
 		controller: function controller(burnsService) {
 			this.burns = burnsService.data;
+			console.log("Data in Angular: ", this.burns);
 		},
 		controllerAs: 'burnCtrl'
 	}).state('burns.details', {

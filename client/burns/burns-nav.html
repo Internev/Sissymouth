@@ -1,18 +1,14 @@
 	<div ng-repeat="burn in burnCtrl.burns">
 		<div class="col-md-offset-1 col-md-3">
-			<a ui-sref="burns.details({burnId: burn})">{{burn}}</a>
+			<a ui-sref="burns.details({burnId: burn.name})">{{burn.name}}</a>
+			<img class="img-responsive" src="{{burn.photo}} alt="{{burn.name}} image">
 		</div>
 	</div>
-<!-- 			<ul>
-				<li ng-repeat="burn in burnCtrl.burns">
-					<a ui-sref="burns.details({burnId: burn})">{{burn}}</a>
-				</li>
-			</ul> -->
 
 	<div ui-view></div>
-<div class="row">
-<div class="col-md-12">
-<br>
-		<a class="btn btn-primary col-md-12" ui-sref="burns.new"><span class="glyphicon glyphicon-fire">&nbsp</span>New Burn Report</a>
-</div>
-</div>
+	<div class="row">
+		<div class="col-md-12">
+			<br>
+			<a class="btn btn-primary col-md-12" ui-sref="burns.new"><span class="glyphicon glyphicon-fire">&nbsp</span>New Burn Report</a>
+		</div>
+	</div>

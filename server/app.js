@@ -11,17 +11,18 @@ let jsonParser = bodyParser.json();
 
 app.use( express.static(__dirname + "/../client"));
 
+//Serves the burn object from db to client app.js as json.
 app.get("/burns", (req, res) => {
 	let burns = mongoUtil.burns();
 	burns.find().toArray((err, docs) => {
 		if (err) {
 			res.sendStatus(400);
 		}
-		let burnNames = docs.map((burn) => burn.name);
-		res.json(burnNames);
+		res.json(docs);
 	})
 });
 
+//Serves the full burn db object, based on search of name. 
 app.get("/burns/:burnId", (req, res) => {
 
 	let burnId = req.params.burnId;
@@ -39,24 +40,8 @@ app.get("/burns/:burnId", (req, res) => {
 
 app.post("/burns/add/new", jsonParser, (request, response) => {
 	let newBurn = request.body.burn || {};
-
-	console.log(newBurn.name);
-	// if (!newBurn.consistency || !newBurn.type || newBurn.level){
-	// 	response.sendStatus(400);
-	// }
-
 	let burns = mongoUtil.burns();
-	let query = {name: newBurn.name};
-	let update = {$push: {burns: newBurn}};
 
-	// burns.findOneAndUpdate(query, update, (err, res) => {
-	// 	if (err){
-	// 		console.log("failure");
-	// 	}
-	// 	console.log("SUCCESS...ish");
-	// 	response.sendStatus(201);
-
-	// });
 	burns.save(newBurn);
 	console.log("Burn: ", newBurn);
 	response.sendStatus(201);

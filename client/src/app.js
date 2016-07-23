@@ -6,6 +6,7 @@ angular.module('sissy', ["ui.router"])
 	$urlRouterProvider.otherwise('/burns')
 
 	$stateProvider
+	//Pulls data from server app.js /burns endpoint. 
 	.state('burns', {
 		url: '/burns',
 		templateUrl: 'burns/burns-nav.html',
@@ -16,6 +17,7 @@ angular.module('sissy', ["ui.router"])
 		},
 		controller: function(burnsService){
 			this.burns = burnsService.data;
+			console.log("Data in Angular: ", this.burns);
 		},
 		controllerAs: 'burnCtrl',
 	})

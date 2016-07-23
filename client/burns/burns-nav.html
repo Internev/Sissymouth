@@ -1,9 +1,18 @@
-	<ul>
-		<li ng-repeat="burn in burnCtrl.burns">
+	<div ng-repeat="burn in burnCtrl.burns">
+		<div class="col-md-offset-1 col-md-3">
 			<a ui-sref="burns.details({burnId: burn})">{{burn}}</a>
-		</li>
-	</ul>
-	
+		</div>
+	</div>
+<!-- 			<ul>
+				<li ng-repeat="burn in burnCtrl.burns">
+					<a ui-sref="burns.details({burnId: burn})">{{burn}}</a>
+				</li>
+			</ul> -->
+
 	<div ui-view></div>
-	<a class="btn btn-primary" ui-sref="burns.new"><span class="glyphicon glyphicon-fire">&nbsp</span>New Burn Report</a>
-	<div>
+<div class="row">
+<div class="col-md-12">
+<br>
+		<a class="btn btn-primary col-md-12" ui-sref="burns.new"><span class="glyphicon glyphicon-fire">&nbsp</span>New Burn Report</a>
+</div>
+</div>

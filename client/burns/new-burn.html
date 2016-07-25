@@ -1,40 +1,58 @@
-<div>
+<div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
 	<form role="form" name="newBurnForm" ng-submit="newBurnCtrl.saveBurn(burn)">
-		<h3>A new burn? Oh no!</h3>
-
-		<div class="form-field">
-			<label for="name">Food:</label>
-			<input id="name" required ng-model="burn.name"/>
+		<h3 align="center">A new burn? Oh no!</h3>
+		<div class="form-group row">
+			<label for="name" class="col-sm-3 form-control-label text-right">Food:</label>
+			<div class="col-sm-9">
+				<input id="name" required ng-model="burn.name" class="form-control" />
+			</div>
 		</div>
-
-		<div class="form-field">
-			<label for="consistency">Consistency:</label>
-			<select id="consistency" required ng-model="burn.consistency">
-				<option value="solid">solid</option>
-				<option value="liquid">liquid</option>
-				<option value="goo">goo!</option>
-			</select><br>
-			<label for="type">Type:</label>
-			<select id="type" required ng-model="burn.type">
-				<option value="sweet">sweet</option>
-				<option value="savoury">savoury</option>
-			</select><br>
-			<label for="level">Burn Level:</label>
-			<select id="level" required ng-model="burn.level">
-				<option value="1">★</option>
-				<option value="2">★★</option>
-				<option value="3">★★★</option>
-				<option value="4">★★★★</option>
-				<option value="5">★★★★★</option>
-			</select>	<br>
-			<label for="comments">Comments:</label>
-			<textarea id="comments" ng-model="burn.comments"></textarea><br>
-			<label for="photo">Photo:</label>
-			<input id="photo" ng-model="burn.photo"/>
+		<div class="form-group row">
+			<label for="consistency" class="col-sm-3 form-control-label text-right">Consistency:</label>
+			<div class="col-sm-9">
+				<select id="consistency" required ng-model="burn.consistency" class="form-control">
+					<option value="solid">solid</option>
+					<option value="liquid">liquid</option>
+					<option value="goo">goo!</option>
+				</select>
+			</div>
 		</div>
-		<div> 
-			<input type="submit" value="Submit">
+		<div class="form-group row">
+			<label for="type" class="col-sm-3 form-control-label text-right">Type:</label>
+			<div class="col-sm-9">
+				<select id="type" required ng-model="burn.type" class="form-control">
+					<option value="sweet">sweet</option>
+					<option value="savoury">savoury</option>
+				</select>
+			</div>
 		</div>
-
+		<div class="form-group row">
+			<label for="level" class="col-sm-3 form-control-label text-right">Burn Level:</label>
+			<div class="col-sm-9">
+				<select id="level" required ng-model="burn.level" class="form-control">
+					<option value="1">★</option>
+					<option value="2">★★</option>
+					<option value="3">★★★</option>
+					<option value="4">★★★★</option>
+					<option value="5">★★★★★</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="comments" class="col-sm-3 form-control-label text-right">Comments:</label>
+			<div class="col-sm-9">
+				<textarea id="comments" ng-model="burn.comments" class="form-control"></textarea>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="photo" class="col-sm-3 form-control-label text-right">Photo:</label>
+			<div class="col-sm-9">
+				<input id="photo" ng-model="burn.photo" class="form-control" />
+			</div>
+		</div>
+		<div class="col-md-6 col-xs-6 col-md-offset-3 col-xs-offset-3">
+			<input type="submit" value="Submit" class="btn btn-warning col-xs-12">
+		</div>
 	</form>
 </div>
+<div class="col-md-2 col-sm-2"></div>
